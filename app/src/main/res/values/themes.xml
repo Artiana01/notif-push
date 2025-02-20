@@ -14,12 +14,21 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <!-- Theme without ActionBar -->
     <style name="Theme.MyApplication.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.MyApplication.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.MyApp.SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_screen_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/cat2</item> <!-- Vérifie ici que l'icône est bien dans res/drawable/cat2 -->
+        <item name="windowSplashScreenAnimationDuration">500</item> <!-- Durée de l'animation -->
+        <item name="postSplashScreenTheme">@style/Theme.MyApplication</item> <!-- Thème après le Splash -->
+    </style>
 
+
+    <!-- Overlay styles -->
+    <style name="Theme.MyApplication.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="Theme.MyApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
